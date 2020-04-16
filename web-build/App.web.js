@@ -1,9 +1,9 @@
 /**
- * React Native App
+ * Web App
  */
 import React, {Component} from 'react';
 
-import Home from './Scene/Home';
+import Home from '../Scene/Home';
 
 class App extends Component {
   render() {
