@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 
-import Home from '../Scene/Home';
+import Home from './Scene/HomeScene';
 
 class App extends Component {
   render() {

@@ -1,12 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const HomeScreen = () => {
+const HappyScene = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>
-        Welcome to React Native Web universal app!
-      </Text>
+      <Text style={styles.welcome}>快乐玩耍页面</Text>
     </View>
   );
 };
@@ -25,4 +23,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default HappyScene;
