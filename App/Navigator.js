@@ -10,6 +10,7 @@ import {
 import HomeScene from '../src/Scene/HomeScene';
 import UserScene from '../src/Scene/UserScene';
 import HappyScene from '../src/Scene/HappyScene';
+import ModalScene from '../src/Scene/ModalScene';
 
 const HomeTab = createBottomTabNavigator(
   {
@@ -54,9 +55,16 @@ const HappyNavigator = createStackNavigator({
   Happy: {screen: HappyScene, navigationOptions: {header: null}},
 });
 
-const AppNavigator = createStackNavigator({
-  HomeTab: HomeTab,
-  Happy: HappyNavigator,
-});
+const AppNavigator = createStackNavigator(
+  {
+    HomeTab: HomeTab,
+    Happy: HappyNavigator,
+    Modal: ModalScene,
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none',
+  },
+);
 
 export default createAppContainer(AppNavigator);

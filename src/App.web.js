@@ -2,13 +2,29 @@
  * Web App
  */
 import React, {Component} from 'react';
+import {View, StyleSheet} from 'react-native';
+import {ModalContainer} from 'react-router-modal';
 
-import Home from './Scene/HomeScene';
+import BottomNav from './BottomNav';
+import Navigator from './RouteWrapper/Navigator';
 
 class App extends Component {
   render() {
-    return <Home />;
+    return (
+      <View style={styles.container}>
+        {Navigator}
+        <BottomNav />
+        <ModalContainer />
+      </View>
+    );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    height: '100vh',
+    width: '100vw',
+  },
+});
 
 export default App;

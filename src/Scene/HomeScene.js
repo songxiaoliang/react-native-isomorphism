@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Platform} from 'react-native';
 
 export default class HomeScene extends Component {
+  /**
+   * 跳转到Happy
+   * @memberof HomeScene
+   */
   goHappy = () => {
     const {navigation} = this.props;
-    navigation.navigate('Happy');
+    navigation.navigate('Happy', {name: 'Codeing!'});
   };
 
   render() {
