@@ -43,13 +43,13 @@ npx create-react-app my-web-app
 (3) 将 (2) 步创建的 react web 工程中的 public、src 目录导入 (1) 步 创建的 rn 工程
 
 (4) 用过 npm 或 yarn  安装以下依赖
-`xml
+`
 "react-art": "^16.13.1" // art 图形渲染
 "react-dom": "^16.13.1" // react 组件到 web 组件到解析、渲染
 "react-router-dom": "^5.1.2" // react web 导航
 "react-router-modal": "^1.5.2" // react web modal router
 "react-native-web": "^0.12.2" // react-native 解析成 web 组件
-`
+xml`
 
 (5) package.json 文件中添加以下 scripts
 
