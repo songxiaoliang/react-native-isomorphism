@@ -5,32 +5,30 @@ React Native三端同构皆在🈯️在不改动 React Native 代码下，公�
 
 在实际开发过程中, 尤其创业公司, 需求的迭代周期是非常快的, 并且由于人力成本等因素, 单独为每个平台实现一套代码的代价是极大的。如何实现一套代码多端平台运行，就变得非常重要。而 React Native 三端同构就能轻松解决这个问题。同时, 可以使开发者花费更多的时间在功能开发上, 保证了开发团队轻、快、高的目标实现。
 
-实现原理
+##### 实现原理
 做过 react-native 开发的同学肯定对 react-native 的框架不陌生, react-native 是基于 React 实现，基于React封装了一套可在Android、iOS平台同时运行的组件。经过 编译、解析、 render 后会以虚拟 DOM 的形式存储在内存中, 所以基于 React Dom 我们可以实现对应平台的不同实现
-
-
 
 目前业界提供了几种实现方式:
 
-reactxp
+##### reactxp
 
 支持 ios、android、web、windows 。提供的api 较少, 平台支持度不高
 
-JD Taro
+##### JD Taro
 
 taro 不仅支持 web，还支持编译成小程序，但是目前平台支持度也不是特别高，api支持度低，建议在支持小程序的场景下使用
 
-react-native-web
+##### react-native-web
 
 react-native-web 官方对其称对原项目没有任何侵入性，无需改动原来的代码，只需在项目中加入一些 web 构建配置即可构建运行出和 react-native 一致的效果。并且结合 react-native 的支持度非常高, 建议使用此方案。
 
-应用场景
+##### 应用场景
 基于 React Native 实现三端同构的应用场景包括：
 
 在 React Native 页面崩溃时用对应的 Web 页，保证用户可以正常使用页面。
 对于需要分享到社交网络如微信朋友圈、微博的页面，不可避免地需要 Web 网页。
 ....
-怎么做?
+##### 怎么做?
 react-native-web 实现原理是将 react-native 组件生成web页面对应的标签元素。并且通过构建工具，实现 Write Once, Run Anywhere。接下来对于现有的 react-native 项目，如何将 react-native-web 进行整合, 我们一一说来。
 
 (1) 创建 react-native 应用
@@ -45,12 +43,14 @@ npx create-react-app my-web-app
 (3) 将 (2) 步创建的 react web 工程中的 public、src 目录导入 (1) 步 创建的 rn 工程
 
 (4) 用过 npm 或 yarn  安装以下依赖
-
+`
 "react-art": "^16.13.1" // art 图形渲染
 "react-dom": "^16.13.1" // react 组件到 web 组件到解析、渲染
 "react-router-dom": "^5.1.2" // react web 导航
 "react-router-modal": "^1.5.2" // react web modal router
 "react-native-web": "^0.12.2" // react-native 解析成 web 组件
+`
+
 (5) package.json 文件中添加以下 scripts
 
 // react-native
