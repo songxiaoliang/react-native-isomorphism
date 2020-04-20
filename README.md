@@ -137,18 +137,18 @@ const goBack = () => {
 react-native 端:
 
 import {StackActions} from 'react-navigation';
- 
+
 const pop = ({navigation, n}) => {
   navigation.dispatch(StackActions.pop({n}));
 };
- 
+
 export default pop;
 web 端:
 
 const pop = ({ screen, navigation }) => {
   navigation.navigate(screen)
 }
- 
+
 export default pop
 使用方式:
 
@@ -182,7 +182,7 @@ NativeModules polyfill.js
 
 import { NativeModules } from 'react-native';
 import MyModule from './MyModule'; // 实现自定义 Native Modules 的地方
- 
+
 NativeModules.MyModule = MyModule; // 挂载 MyModule
 这段代码的作用是把针对 Web 平台编写的自定义原生模块挂载到 Native Modules 对象上成为其属性，以让 JavaScript 代码在访问自定义 Native Modules 时访问到针对 Web 平台编写模块。
 
@@ -192,7 +192,7 @@ NativeModules.MyModule = MyModule; // 挂载 MyModule
 1. Platform.OS
 
 import { Platform } from 'react-native';
- 
+
 if(Platform.OS === 'web'){
   // Web
 } else if (Platform.OS === 'android') {
@@ -225,6 +225,4 @@ index.web.js
 其实还有很多的功能应用场景可以使用同构来轻松解决, 同样, 不足的地方也很明显, 平台的区分、react-native-web Api的支持、导航库的支持等等, 还需要我们根据实际的开发需求来针对性的进行自定义、补充实现。同时, 基于当前的架构, 我也会不断完善。
 
 以上就是关于 react-native 三端同构的全部内容, 更多内容可查看源码
-————————————————
-版权声明：本文为CSDN博主「Songlcy」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/u013718120/article/details/105573588
+
