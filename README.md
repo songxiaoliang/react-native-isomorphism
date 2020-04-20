@@ -43,25 +43,26 @@ npx create-react-app my-web-app
 (3) 将 (2) 步创建的 react web 工程中的 public、src 目录导入 (1) 步 创建的 rn 工程
 
 (4) 用过 npm 或 yarn  安装以下依赖
-`
-"react-art": "^16.13.1" // art 图形渲染
-"react-dom": "^16.13.1" // react 组件到 web 组件到解析、渲染
-"react-router-dom": "^5.1.2" // react web 导航
-"react-router-modal": "^1.5.2" // react web modal router
-"react-native-web": "^0.12.2" // react-native 解析成 web 组件
-xml`
+```xml
+  "react-art": "^16.13.1" // art 图形渲染
+  "react-dom": "^16.13.1" // react 组件到 web 组件到解析、渲染
+  "react-router-dom": "^5.1.2" // react web 导航
+  "react-router-modal": "^1.5.2" // react web modal router
+  "react-native-web": "^0.12.2" // react-native 解析成 web 组件
+```
 
 (5) package.json 文件中添加以下 scripts
-
-// react-native
-"android": "react-native run-android",
-"ios": "react-native run-ios",
-"start": "react-native start",
-// web
-"start-web": "react-scripts start",
-"build-web": "react-scripts build",
-"test-web": "react-scripts test",
-"eject-web": "react-scripts eject"
+```xml
+  // react-native
+  "android": "react-native run-android",
+  "ios": "react-native run-ios",
+  "start": "react-native start",
+  // web
+  "start-web": "react-scripts start",
+  "build-web": "react-scripts build",
+  "test-web": "react-scripts test",
+  "eject-web": "react-scripts eject"
+```
 以上步骤完成后, 将 App.js 文件 剪切到src目录, 并且在 src/index.js 文件中指向 App.js 文件, 此时我们可以使用 yarn start-web 来启动, react-native-web 即可帮我们将App.js解析成 web 端的对应实现, 并在浏览器中展示。
 
 路由机制
