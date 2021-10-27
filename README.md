@@ -1,6 +1,6 @@
 # react-native-isomorphism
 react-native-isomorphism
-### 基于最新版本 React-Native 实现三端同构实践
+### 基于最新版本 React-Native 实现三端同构
 #### 博客链接:https://blog.csdn.net/u013718120/article/details/105573588
 
 React Native三端同构皆在不改动 React Native 代码下，公用一套代码架构, 在浏览器中实现同样的展示、交互、功能。
